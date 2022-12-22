@@ -13,7 +13,7 @@ $ export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/demo_WarehouseRobot/models
 ```
 
 - 插入模型 
-在gazebo中，在insert面板内，选择模型进行插入！
+在gazebo中，在insert面板内，选择模型mobile_warehouse_robot进行插入！
 
 - 查看当前消息
 ```shell
@@ -27,6 +27,10 @@ $ ros2 topic list -t
 /rosout [rcl_interfaces/msg/Log]
 /tf [tf2_msgs/msg/TFMessage]
 ```
+> 这里/tf消息包括了机器人各link之间的转换关系。
+> /tf话题是由插件`libgazebo_ros_diff_drive.so`生成的。
+
+
 - 速度控制
 ```shell
 ros2 topic pub /demo/cmd_vel geometry_msgs/Twist '{linear: {x: 0.05}}' -1
@@ -115,4 +119,7 @@ $ ros2 launch warehouse_robot_controller_pkg controller_estimator.launch.py
 
 
 
-
+查看机器人各link的转换关系：
+```shell
+$ ros2 topic echo /tf
+```

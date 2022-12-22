@@ -199,6 +199,7 @@ ros2 run tf2_ros tf2_echo chassis left_wheel
             </axis>
         </joint>
         <joint type="fixed" name="laser_joint">
+            <pose>0.15 0 0.5 0 0 0</pose>
             <child>laser_link</child>
             <parent>chassis</parent>
         </joint>
