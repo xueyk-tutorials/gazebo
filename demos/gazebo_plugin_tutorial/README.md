@@ -1,4 +1,9 @@
 
+## 打开模型
+```shell
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/media/alex/Develop/alex-github/drone_tutorials/gazebo/demos/gazebo_plugin_tutorial/models
+```
+
 
 ## 编译
 ```shell
