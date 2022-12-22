@@ -7,7 +7,7 @@
 https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/classgazebo_1_1physics_1_1Joint.html
 
 
-## anz
+## 安装
 https://www.guyuehome.com/20642
 
 ```shell
@@ -27,6 +27,16 @@ The following NEW packages will be installed:
   libsimbody3.6 libspnav0 libtar0 sdformat-sdf ttf-dejavu-core
 ```
 
+## 下载模型
+方式一：通过git仓库下载(推荐)
+```shell
+$ git clone https://github.91chi.fun/https://github.com/osrf/gazebo_models.git
+```
+方式二：通过wget下载
+```shell
+$ wget -r http://models.gazebosim.org/
+```
+下载好的模型文件拷贝至`~/.gazebo/models`下即可。
 ## 相关文件路径
 
 ```shell
@@ -34,6 +44,16 @@ GAZEBO_INCLUDE_DIRS=/usr/include;/usr/include/gazebo-9;/usr/include/bullet;/usr/
 
 GAZEBO_LIBRARY_DIRS=/usr/lib/x86_64-linux-gnu;/usr/lib/x86_64-linux-gnu/gazebo-9/plugins;/usr/lib/x86_64-linux-gnu
 ```
+> 可以在终端通过命令`printenv`打印环境变量，例如：`printenv GAZEBO_MODEL_PATH`
+
+- models文件
+/usr/share/gazebo-11/models
+
+- worlds文件
+/usr/share/gazebo-11/worlds
+
+- plugins文件
+/usr/lib/x86_64-linux-gnu/plugins
 
 ## 启动gazebo
 
